@@ -1,0 +1,8 @@
+- op: replace
+  path: /spec/source/repoURL
+  value: 'https://github.com/alpajain23/ai-accelerator.git'
+- op: replace
+  path: /spec/source/targetRevision
+  value: main
+
+

@@ -3,6 +3,7 @@ kind: Notebook
 metadata:
   annotations:
     notebooks.opendatahub.io/inject-oauth: 'true'
+    argocd.argoproj.io/sync-options: ServerSideApply=true
     opendatahub.io/image-display-name: Standard Data Science
     notebooks.opendatahub.io/oauth-logout-url: ''
     opendatahub.io/accelerator-name: ''

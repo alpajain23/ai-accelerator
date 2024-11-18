@@ -81,6 +81,10 @@ spec:
               name: trusted-ca
               readOnly: true
               subPath: ca-bundle.crt
+            - mountPath: /etc/oauth/config
+              name: oauth-config
+            - mountPath: /etc/tls/private
+              name: tls-certificates
           workingDir: /opt/app-root/src
           envFrom:
             - secretRef:
@@ -101,4 +105,11 @@ spec:
             name: workbench-trusted-ca-bundle
             optional: true
           name: trusted-ca
-
+        - name: oauth-config
+          secret:
+            defaultMode: 420
+            secretName: test-ssl-oauth-config
+        - name: tls-certificates
+          secret:
+            defaultMode: 420
+            secretName: standard-workbench-tls
